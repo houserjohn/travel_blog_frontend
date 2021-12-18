@@ -5,11 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 function ArticlePost() {
     return (
-        <div className="bg-gray-100 rounded-xl border border-gray-200 shadow-lg py-2 px-4">
-            <div className="text-gray-600 pt-1">
-                Content
-            </div>
-            <h1>Any place in your app!</h1>
+        <div className="bg-gray-100 rounded-xl shadow-lg ">
             <Formik
             initialValues={{ email: '', password: '' }}
             validate={values => {
@@ -32,17 +28,25 @@ function ArticlePost() {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                    <Field className="bg-gray-100 border border-gray-200 text-lg w-full font-semibold focus:outline-0" type="text" name="email" placeholder="Title" />
-                    <ErrorMessage className="text-red-600 border border-red-600" name="email" component="div" />
-                    <div className="text-sm font-normal text-gray-600 inline-block w-fit">
-                        By Author on 10/12/2021
+                    <div className="bg-white rounded-t-xl border border-gray-200 py-2">
+                        <div className="w-11/12 m-auto">
+                            <Field className="overflow-visible focus:bg-gray-100 text-lg w-full font-semibold focus:outline-0" type="text" name="email" placeholder="Title" component="input" />
+                            <ErrorMessage className="text-red-600 border border-red-600" name="email" component="div" />
+                            <div className="text-sm font-normal text-gray-500 inline-block w-fit">
+                                By Author on 10/12/2021
+                            </div>
+                        </div>
                     </div>
-                    <Field className="block bg-gray-100 border border-gray-200 w-full focus:outline-0" type="text" name="password" placeholder="Content" />
-                    <ErrorMessage name="password" component="div" />
-                    <div className="m-auto w-fit">
-                        <button className="float-center bg-sky-500 hover:bg-sky-700 text-white rounded py-1 px-5 font-semibold" type="submit" disabled={isSubmitting}>
-                            Post
-                        </button>
+                    <div className="border border-gray-200 rounded-b-xl">
+                        <div className="w-11/12 m-auto py-2">
+                        <Field className="block focus:bg-gray-200 bg-gray-100 text-gray-800 w-full focus:outline-0" type="text" name="password" placeholder="Content" />
+                        <ErrorMessage name="password" component="div" />
+                        <div className="m-auto w-fit">
+                            <button className="float-center bg-sky-500 hover:bg-sky-700 text-white rounded py-1 px-5 font-semibold" type="submit" disabled={isSubmitting}>
+                                Post
+                            </button>
+                        </div>
+                        </div>
                     </div>
                     </Form>
                 )}
