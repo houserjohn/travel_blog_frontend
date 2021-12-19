@@ -4,7 +4,7 @@
 * View travels posts by others
 
 ## Technologies used
-* React, Next.js, Typescript, Formik and Yup, Tailwind CSS
+* React, Next.js, Typescript, Formik and Yup, Tailwind CSS, Axios
 
 ## Setting up React, Next.js, Typescript, Tailwind CSS
 [Follow this tutorial](https://www.pullrequest.com/blog/how-to-create-a-nextjs-typescript-tailwindcss-project/)
